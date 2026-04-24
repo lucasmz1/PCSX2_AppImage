@@ -27,6 +27,7 @@ chmod +x ./sharun
 xvfb-run -- ./sharun l -p -v -e -s -k /usr/bin/pcsx2-qt \
 	/usr/lib/x86_64-linux-gnu/dri/* \
 	/usr/lib/x86_64-linux-gnu/vdpau/* \
+	/usr/lib/x86_64-linux-gnu/qt6/*/* \
 	/usr/lib/x86_64-linux-gnu/libshaderc.so* \
 	/usr/lib/x86_64-linux-gnu/libQt6Svg.so* \
 	/usr/lib/x86_64-linux-gnu/lib*CL*.so* \
