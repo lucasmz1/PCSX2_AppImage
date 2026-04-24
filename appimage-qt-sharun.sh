@@ -5,7 +5,7 @@ SCRIPTDIR=$(dirname "${BASH_SOURCE[0]}")
 set -e
 sudo apt-get update
 sudo apt-get install xvfb file binutils patchelf findutils grep sed coreutils strace -y
-sudo apt-get install qt6-base-dev qt6-base-dev-tools -y
+sudo apt-get install libqt6svg6 -y
 sudo add-apt-repository ppa:pcsx2-team/pcsx2-daily -y
 sudo apt-get update
 sudo apt-get install pcsx2-unstable -y
