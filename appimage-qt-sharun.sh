@@ -9,6 +9,7 @@ sudo apt-get install libqt6svg6 -y
 sudo add-apt-repository ppa:pcsx2-team/pcsx2-daily -y
 sudo apt-get update
 sudo apt-get install pcsx2-unstable -y
+sudo apt-get clean && sudo apt-get autoclean 
 mkdir -p AppDir
 OUTDIR=./AppDir
 
