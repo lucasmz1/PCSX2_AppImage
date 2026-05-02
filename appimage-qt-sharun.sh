@@ -4,7 +4,7 @@ SCRIPTDIR=$(dirname "${BASH_SOURCE[0]}")
 
 set -e
 sudo apt-get update
-sudo apt-get install xvfb file binutils patchelf findutils grep sed coreutils strace -y
+sudo apt-get install xvfb file binutils patchelf findutils grep sed coreutils strace vulkan-tools -y
 sudo apt-get install libqt6svg6 -y
 sudo add-apt-repository ppa:pcsx2-team/pcsx2-daily -y
 sudo apt-get update
@@ -24,7 +24,7 @@ wget -O "sharun" "https://github.com/VHSgunzo/sharun/releases/download/v0.8.1/sh
 chmod +x ./sharun
 
 # Gerar AppRun com xvfb
-xvfb-run -- ./sharun l -p -v -e -s -k /usr/bin/pcsx2-qt \
+xvfb-run -- ./sharun l -p -v -e -s -k /usr/bin/pcsx2-qt /usr/bin/vulkaninfo \
 	/usr/lib/x86_64-linux-gnu/dri/* \
 	/usr/lib/x86_64-linux-gnu/vdpau/* \
 	/usr/lib/x86_64-linux-gnu/qt6/*/* \
