@@ -24,7 +24,7 @@ wget -O "sharun" "https://github.com/VHSgunzo/sharun/releases/download/v0.8.1/sh
 chmod +x ./sharun
 
 # Gerar AppRun com xvfb
-xvfb-run -- ./sharun l -p -v -e -s -k /usr/bin/pcsx2-qt /usr/bin/vulkaninfo \
+xvfb-run -- ./sharun l -p -v -e -s -k /usr/bin/pcsx2-qt \
 	/usr/lib/x86_64-linux-gnu/dri/* \
 	/usr/lib/x86_64-linux-gnu/vdpau/* \
 	/usr/lib/x86_64-linux-gnu/qt6/*/* \
@@ -34,6 +34,7 @@ xvfb-run -- ./sharun l -p -v -e -s -k /usr/bin/pcsx2-qt /usr/bin/vulkaninfo \
 	/usr/lib/x86_64-linux-gnu/libvulkan*.so* \
 	/usr/lib/x86_64-linux-gnu/libVkLayer*.so* \
 	/usr/lib/x86_64-linux-gnu/libvulkan_* \
+	/usr/lib/x86_64-linux-gnu/libvulkan* \
     /usr/lib/x86_64-linux-gnu/lib*GL*.so* \
 	/usr/lib/x86_64-linux-gnu/libXss.so* \
 	/usr/lib/x86_64-linux-gnu/gio/modules/* \
