@@ -50,7 +50,10 @@ cp -r /usr/share/PCSX2/ ./share/
 ln -rs share/ ./shared/
 ln ./sharun AppRun
 ./sharun -g
+echo 'SHARUN_ALLOW_LD_PRELOAD=1' > .env
+echo 'SHARUN_ALLOW_SYS_VKICD=1' >> .env
 echo 'QT_QPA_PLATFORM=xcb' >> .env
+echo 'SDL_AUDIODRIVER=pulseaudio' >> .env
 
 cd ..
 
