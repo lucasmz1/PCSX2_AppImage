@@ -5,7 +5,7 @@ SCRIPTDIR=$(dirname "${BASH_SOURCE[0]}")
 set -e
 sudo apt-get update
 sudo apt-get install xvfb file binutils patchelf findutils grep sed coreutils strace vulkan-tools -y
-sudo apt install libvulkan1 mesa-vulkan-drivers vulkan-tools libvulkan-dev vulkan-validationlayers -y
+sudo apt install libvulkan1 mesa-vulkan-drivers vulkan-tools libvulkan-dev vulkan-validationlayers libsdl2-2.0-0 -y
 sudo apt-get install libqt6svg6 -y
 sudo add-apt-repository ppa:pcsx2-team/pcsx2-daily -y
 sudo apt-get update
@@ -30,6 +30,7 @@ xvfb-run -- ./sharun l -p -v -e -s -k /usr/bin/pcsx2-qt \
 	/usr/lib/x86_64-linux-gnu/vdpau/* \
 	/usr/lib/x86_64-linux-gnu/qt6/*/* \
 	/usr/lib/x86_64-linux-gnu/libshaderc.so* \
+	/usr/lib/x86_64-linux-gnu/libsdl2* \
 	/usr/lib/x86_64-linux-gnu/libQt6Svg.so* \
 	/usr/lib/x86_64-linux-gnu/lib*CL*.so* \
 	/usr/lib/x86_64-linux-gnu/libvulkan*.so* \
