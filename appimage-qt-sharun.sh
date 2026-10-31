@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-SCRIPTDIR=$(dirname "${BASH_SOURCE[0]}")
-
 set -e
 sudo apt-get update
 sudo apt-get install xvfb file binutils patchelf findutils grep sed coreutils strace vulkan-tools -y
@@ -17,7 +15,6 @@ cd "$OUTDIR"
 
 # Baixar sharun
 wget -O "sharun" "https://github.com/VHSgunzo/sharun/releases/download/v0.8.1/sharun-x86_64"
-
 
 chmod +x ./sharun
 
