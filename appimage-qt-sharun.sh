@@ -9,7 +9,7 @@ sudo apt install libvulkan1 mesa-vulkan-drivers vulkan-tools libvulkan-dev vulka
 sudo apt-get install libqt6svg6 -y
 sudo add-apt-repository ppa:pcsx2-team/pcsx2-daily -y
 sudo apt-get update
-sudo apt-get install pcsx2-unstable -y
+sudo apt-get install pcsx2 -y
 mkdir -p AppDir
 OUTDIR=./AppDir
 
@@ -47,6 +47,8 @@ xvfb-run -- ./sharun l -p -v -e -s -k /usr/bin/pcsx2-qt \
 	/usr/lib/x86_64-linux-gnu/pipewire-0.3/* \
 	/usr/lib/x86_64-linux-gnu/spa-0.2/*/* || true
 cp -r /usr/share/PCSX2/ ./share/
+cp -f /usr/share/icons/hicolor/256x256/apps/PCSX2.png .
+ln PCSX2.png .DirIcon
 ln -rs share/ ./shared/
 ln ./sharun AppRun
 ./sharun -g
