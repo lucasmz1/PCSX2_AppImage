@@ -7,7 +7,7 @@ sudo apt install libvulkan1 mesa-vulkan-drivers vulkan-tools libvulkan-dev vulka
 sudo apt install libqt6svg6 -y
 sudo add-apt-repository ppa:pcsx2-team/pcsx2-daily -y
 sudo apt update
-sudo apt install pcsx2-unstable -y
+sudo apt install pcsx2 -y
 mkdir AppDir
 OUTDIR=./AppDir
 
