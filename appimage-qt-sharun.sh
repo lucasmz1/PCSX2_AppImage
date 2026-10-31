@@ -47,8 +47,7 @@ xvfb-run -- ./sharun l -p -v -e -s -k /usr/bin/pcsx2-qt \
 	/usr/lib/x86_64-linux-gnu/pipewire-0.3/* \
 	/usr/lib/x86_64-linux-gnu/spa-0.2/*/* || true
 cp -r /usr/share/PCSX2/ ./share/
-find /usr/share/icons/ -iname '*PCSX2.png*' | xargs -I{} cp -f {} . \;
-ln PCSX2.png .DirIcon
+find /usr/share/icons/ -iname '*pcsx2*' -exec cp -f {} . \; && ln -sf $(ls -S *pcsx2* | head -n 1) .DirIcon
 ln -rs share/ ./shared/
 ln ./sharun AppRun
 ./sharun -g
