@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 set -e
-sudo apt-get update
-sudo apt-get install xvfb file binutils patchelf findutils grep sed coreutils strace vulkan-tools -y
+sudo apt update
+sudo apt install xvfb file binutils patchelf findutils grep sed coreutils strace vulkan-tools -y
 sudo apt install libvulkan1 mesa-vulkan-drivers vulkan-tools libvulkan-dev vulkan-validationlayers libsdl2-2.0-0 libasound2-plugins -y
-sudo apt-get install libqt6svg6 -y
+sudo apt install libqt6svg6 -y
 sudo add-apt-repository ppa:pcsx2-team/pcsx2-daily -y
-sudo apt-get update
-sudo apt-get install pcsx2 -y
-mkdir -p AppDir
+sudo apt update
+sudo apt install pcsx2-unstable -y
+mkdir AppDir
 OUTDIR=./AppDir
 
 cd "$OUTDIR"
