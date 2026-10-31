@@ -15,9 +15,6 @@ OUTDIR=./AppDir
 
 cd "$OUTDIR"
 
-# Copiar ícone
-cp /usr/share/icons/hicolor/256x256/apps/PCSX2.png .
-cp /usr/share/applications/PCSX2.desktop .
 # Baixar sharun
 wget -O "sharun" "https://github.com/VHSgunzo/sharun/releases/download/v0.8.1/sharun-x86_64"
 
@@ -47,7 +44,10 @@ xvfb-run -- ./sharun l -p -v -e -s -k /usr/bin/pcsx2-qt \
 	/usr/lib/x86_64-linux-gnu/pipewire-0.3/* \
 	/usr/lib/x86_64-linux-gnu/spa-0.2/*/* || true
 cp -r /usr/share/PCSX2/ ./share/
-find /usr/share/icons/ -iname '*pcsx2*' -exec cp -f {} . \; && ln -sf $(ls -S *pcsx2* | head -n 1) .DirIcon
+# Copiar ícone
+cp "${GITHUB_WORKSPACE}"/PCSX2.png .
+cp "${GITHUB_WORKSPACE}"/PCSX2.desktop .
+ln PCSX2.png .DirIcon
 ln -rs share/ ./shared/
 ln ./sharun AppRun
 ./sharun -g
